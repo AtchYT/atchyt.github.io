@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <title>NAX Entertainment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +8,22 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #1a1a1a; /* Fondo para PC */
+            background-color: #1a1a1a;
             color: #ffffff;
         }
         
         .header {
             display: flex;
+            justify-content: center;
             align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             padding: 15px;
-            position: relative;
             background-color: #222222;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 100;
         }
         
         .logo {
@@ -26,6 +31,20 @@
             height: auto;
             position: absolute;
             left: 20px;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .header a {
+            position: absolute;
+            left: -20px;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
         }
         
         .title {
@@ -41,14 +60,39 @@
             text-align: center;
         }
         
-        h1 {
+        h2 {
             color: #FF0000;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .footer {
+            background-color: #222222;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .footer p {
+            margin: 0;
+            color: rgb(0, 154, 243);
+            font-size: 14px;
         }
         
-        /* Media query para dispositivos móviles */
         @media only screen and (max-width: 768px) {
             body {
-                background-color: #000000; /* Fondo negro para móvil */
+                background-color: #000000;
             }
             
             .header {
@@ -76,12 +120,19 @@
 </head>
 <body>
     <div class="header">
-        <img src="nax-logo.svg" alt="NAX Entertainment Logo" class="logo">
+        <a href="https://atchyt.github.io">
+            <img src="nax-logo.svg" alt="NAX Entertainment - Logo" class="logo">
+        </a>
         <h1 class="title">NAX Entertainment</h1>
     </div>
     
     <div class="content">
-        <h1>Web en mantenimiento...</h1>
+        <br>
+        <h2>Web en mantenimiento...</h2>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 NAX Entertainment. All rights reserved.</p>
+    </footer>
 </body>
 </html>
